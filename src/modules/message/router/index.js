@@ -1,7 +1,8 @@
 import { Router } from "express";
 import { httpHandler } from "../../../helper/response/errorUtil.js";
 import massageService from "../services/index.js";
-import imageUploader from "../../../helper/imageUploader.js";
+import imageUploader from "../../../helper/imageuploader.js";
+// import imageUploader from "../../../helper/imageUploader.js";
 
 const router = Router();
 const imageUpload = imageUploader();
