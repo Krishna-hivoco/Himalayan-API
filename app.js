@@ -31,31 +31,31 @@ export const createApp = () => {
     throw new Error("My first Sentry error!");
   });
 
-  app.use((req, res, next) => {
-    const allowedOrigins = ["http://localhost:8806", "http://localhost:8804"];
-    const origin = req.headers.origin;
+  // app.use((req, res, next) => {
+  //   const allowedOrigins = ["http://localhost:8806", "http://localhost:8804"];
+  //   const origin = req.headers.origin;
 
-    if (allowedOrigins.includes(origin)) {
-      res.setHeader("Access-Control-Allow-Origin", origin);
-      res.setHeader("Vary", "Origin"); // Add this line
-      res.setHeader(
-        "Access-Control-Allow-Methods",
-        "GET, POST, PUT, DELETE, OPTIONS"
-      );
-      res.setHeader(
-        "Access-Control-Allow-Headers",
-        "Content-Type, Authorization"
-      );
-      res.setHeader("Access-Control-Allow-Credentials", true);
-    }
+  //   if (allowedOrigins.includes(origin)) {
+  //     res.setHeader("Access-Control-Allow-Origin", origin);
+  //     res.setHeader("Vary", "Origin"); // Add this line
+  //     res.setHeader(
+  //       "Access-Control-Allow-Methods",
+  //       "GET, POST, PUT, DELETE, OPTIONS"
+  //     );
+  //     res.setHeader(
+  //       "Access-Control-Allow-Headers",
+  //       "Content-Type, Authorization"
+  //     );
+  //     res.setHeader("Access-Control-Allow-Credentials", true);
+  //   }
 
-    // Handle preflight requests (for non-simple requests like PUT, DELETE, etc.)
-    if (req.method === "OPTIONS") {
-      return res.status(200).end();
-    }
+  //   // Handle preflight requests (for non-simple requests like PUT, DELETE, etc.)
+  //   if (req.method === "OPTIONS") {
+  //     return res.status(200).end();
+  //   }
 
-    next();
-  });
+  //   next();
+  // });
 
   return app;
 };
