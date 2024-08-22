@@ -1,0 +1,14 @@
+{
+    "elastic": {
+      "cloudID": "fazter:dXMtd2VzdC0yLmF3cy5mb3VuZC5pbzo0NDMkNmJlODkyZmQ4OGUxNDhhZjk5NjBlMDA2NDU5MDk3ZTQkMGRjN2YwYWMzNzdkNDE2ZTk1YmJmYWMxNDY5NmUyY2Y=",
+      "username": "elastic",
+      "password": "EKxTb35f5jTxL8662FPZV4Hy",
+      "apiKey": "paste your API key here"
+    },
+    "elasticDev": {
+      "cloudID": "fazter:dXMtd2VzdC0yLmF3cy5mb3VuZC5pbzo0NDMkNmJlODkyZmQ4OGUxNDhhZjk5NjBlMDA2NDU5MDk3ZTQkMGRjN2YwYWMzNzdkNDE2ZTk1YmJmYWMxNDY5NmUyY2Y=",
+      "username": "elastic",
+      "password": "EKxTb35f5jTxL8662FPZV4Hy",
+      "apiKey": "paste your API key here"
+    }
+  }
