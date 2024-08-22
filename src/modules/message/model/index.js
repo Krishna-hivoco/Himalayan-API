@@ -4,6 +4,12 @@ const { Schema } = mongoose;
 
 const messageSchema = new Schema(
   {
+    name: {
+      type: String,
+      require: true,
+      trim: true,
+    },
+
     image: {
       type: String,
       require: true,

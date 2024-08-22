@@ -23,7 +23,7 @@ const enterFarmerMessage = async (data) => {
   return savedObjects;
 };
 const insertSingleFarmerMessage = async (data, file) => {
-  console.log("file", file);
+  // console.log("file", file);
   const { secure_url } = await cloudinary.uploader.upload(file.path);
 
   const saveddata = await new messageModel({
@@ -35,7 +35,9 @@ const insertSingleFarmerMessage = async (data, file) => {
   return saveddata;
 };
 const randomMessage = async () => {
-  const randomMessage = await Message.aggregate([{ $sample: { size: 1 } }]);
+  const randomMessage = await messageModel.aggregate([
+    { $sample: { size: 1 } },
+  ]);
   assert(
     randomMessage.length > 0,
     createError(StatusCodes.NOT_FOUND, "No message found")

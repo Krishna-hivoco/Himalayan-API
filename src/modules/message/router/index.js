@@ -21,7 +21,7 @@ router.post(
   httpHandler(async (req, res) => {
     const data = req.body;
     const image = req.files;
-    console.log("ima", image);
+    // console.log("ima", image);
     const result = await massageService.insertSingleFarmerMessage(
       data,
       image[0]

@@ -32,11 +32,7 @@ export const createApp = () => {
   });
 
   app.use((req, res, next) => {
-    const allowedOrigins = [
-      "https://indiagategrainsofhope.com",
-      "http://localhost:5173",
-      "http://localhost:8802",
-    ];
+    const allowedOrigins = ["http://localhost:8806", "http://localhost:8804"];
     const origin = req.headers.origin;
 
     if (allowedOrigins.includes(origin)) {
